@@ -1,0 +1,51 @@
+% !TeX spellcheck = en_US
+\documentclass[letterpaper,12pt,twoside]{report}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[L]{Day 5}
+	\fancyhead[R]{\textit{The Calendar Project}}
+	\fancyfoot[L]{Citations Involved: 1, 2, 3}
+	
+	% Problem
+	\paragraph{Problem}
+	\begin{quote}
+	\textsf{Consider the parabola with equation $y = x^2$ and the rectangle with vertices $(1,0)$, $(1,1)$, $(-1,1)$, and $(-1, 0)$. Find the area of the parabolic segment (shaded) and compare its area with that of the rectangle.}
+	\end{quote}
+	
+	% Graphics
+	\begin{center}
+		\begin{tikzpicture}
+		\draw [<->][ultra thick] (-1.5,0) -- (1.5,0);
+		\draw [<->][ultra thick] (0,1.5) -- (0,-1.5);
+		
+		\draw [<->][blue, thick, domain=-1.5:1.5] plot (\x, {\x*\x});
+		\draw [thick] (-1,0) -- (-1, 1) -- (1, 1) -- (1, 0);
+		
+		\node[left] at (-1,1) {$(-1,1)$};
+		\node[right] at (1,1) {$(1,1)$};
+		\end{tikzpicture}
+	\end{center}
+	
+	% Reasoning
+	\paragraph{Reasoning}
+	\begin{quotation}
+	
+	The complement of the condition that \textit{``at least 1 six appears''} is that no six appears, which has a probability of $\frac{\textrm{\small{favorable}}}{\textrm{\small{all possible}}} = \frac{5}{6}$ for 1 roll (1). Since it is given that the die is tossed 6 times, and since this negated condition requires \textbf{all} rolls (not just one) to not be six, the cumulative probability for this negated condition is $(\frac{5}{6})^6 = \frac{5^6}{6^6} = \frac{15625}{46656}$ (3). This result's complement, the solution to the problem, is $1-\frac{15625}{46656} = \boxed{\frac{31031}{46656} \approx 0.665}$ (2).
+	
+	\end{quotation}
+	
+	\paragraph{External References}
+	
+	\begin{enumerate}
+		\item Textbook Ch. 13, Pg. 878: Theoretical Probability
+		\item Textbook Ch. 13, Pg. 879: Complement
+		\item Textbook Ch. 13, Pg. 887: Probability of Independent Events
+	\end{enumerate}
+
+\end{document}
