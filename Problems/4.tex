@@ -10,7 +10,7 @@
 	\fancyhf{}
 	\fancyhead[L]{Day 4}
 	\fancyhead[R]{\textit{The Calendar Project}}
-	\fancyfoot[L]{Citations Involved: 1, 2, 3}
+	\fancyfoot[L]{Citations Involved: none}
 	
 	% Problem
 	\paragraph{Problem}
@@ -28,16 +28,16 @@
 	\paragraph{Reasoning}
 	\begin{quotation}
 	
-	The complement of the condition that \textit{``at least 1 six appears''} is that no six appears, which has a probability of $\frac{\textrm{\small{favorable}}}{\textrm{\small{all possible}}} = \frac{5}{6}$ for 1 roll (1). Since it is given that the die is tossed 6 times, and since this negated condition requires \textbf{all} rolls (not just one) to not be six, the cumulative probability for this negated condition is $(\frac{5}{6})^6 = \frac{5^6}{6^6} = \frac{15625}{46656}$ (3). This result's complement, the solution to the problem, is $1-\frac{15625}{46656} = \boxed{\frac{31031}{46656} \approx 0.665}$ (2).
+	There are $6*6*6=6^3=216$ permutations of results from rolling a six-sided die three times (1). There are $\binom{6}{3}=\frac{6!}{(6-3)!3!}=20$ permutations of $a$, $b$ and $c$ such that $a<b<c$ because each combination of 3 different numbers from 1 to 6 (disregarding order) maps directly to \textbf{one and only one} such permutation as it has only one possible order, determined by $a<b<c$. Using $\frac{\text{favorable}}{\text{all possible}}$, the solution to this problem is represented by $\dfrac{20}{216} =\boxed{\dfrac{5}{54} \approx 9.26\%}$ (2).
 	
 	\end{quotation}
 	
 	\paragraph{External References}
 	
 	\begin{enumerate}
+		\item Textbook Ch. 13, Pg. 870: Fundamental Counting Principle
+		\item Textbook Ch. 13, Pg. 873: Combinations
 		\item Textbook Ch. 13, Pg. 878: Theoretical Probability
-		\item Textbook Ch. 13, Pg. 879: Complement
-		\item Textbook Ch. 13, Pg. 887: Probability of Independent Events
 	\end{enumerate}
 
 \end{document}
