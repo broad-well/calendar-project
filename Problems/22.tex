@@ -24,7 +24,7 @@
 	
 	% Graphics
 	\begin{center}
-		\begin{tikzpicture}[scale=0.42]
+		\begin{tikzpicture}[scale=0.38]
 		\draw[thick][red] (0,6) -- (0,0) -- (8,0) -- cycle;
 		\draw[fill=blue] (0,0) -- (3.4,0) -- (3.4,3.4) -- (0,3.4) -- cycle;
 		
@@ -45,11 +45,11 @@
 	\paragraph{Reasoning}
 	\begin{quotation}
 		
-		Let the side length of $BLUE$ be $x$ yards. It is shown above that $x=EU=UL=LB=BE$. By the SAP, $EU+UD=ED$; given that $ED$ has a length of 8 yards, $x+UD=8$ and thus $UD=8-x$. Given that $\triangle RED$ is a right triangle, $\angle RDE$ can be determined using $\arctan \frac{6}{8} \approx 36.87$\textdegree (3). Since a square is a parallelogram, its opposite sides are parallel (2); given that $\angle BED$ is a right angle, $\angle LUD$ is also a right angle by the Corresponding Angles Postulate (1); $\triangle LUD$ is therefore a right triangle. $\angle RDE \cong \angle LDU$ by the Reflexive Property; thus $LU=x=UD \tan \angle LDU=(8-x)\tan (\arctan \frac{6}{8})$. This is used to solve for $x$ as follows:
+		Let the side length of $BLUE$ be $x$ yards. It is shown above that $x=EU=UL=LB=BE$. By the SAP, $EU+UD=ED$; given that $ED$ has a length of 8 yards, $x+UD=8$ and thus $UD=8-x$. Given that $\triangle RED$ is a right triangle, $\angle RDE$ can be determined using $\tan^(-1) \frac{6}{8}$ (3). Since a square is a parallelogram, its opposite sides are parallel (2); given that $\angle BED$ is a right angle, $\angle LUD$ is also a right angle by the Corresponding Angles Postulate (1); $\triangle LUD$ is therefore a right triangle. $\angle RDE \cong \angle LDU$ by the Reflexive Property. $\tan \angle LDU = \frac{\text{opposite}}{\text{adjacent}} = \frac{LU}{UD}$. When both sides are multiplied by $UD$, this becomes $LU=UD \tan \angle LDU$. Therefore $LU=x=UD \tan \angle LDU=(8-x)\tan (\tan^{-1} \frac{6}{8})$. This is used to solve for $x$ as follows:
 		
 		\begin{center}
 			\begin{tabular}{l | l}
-				$x=(8-x) \cdot \frac{6}{8}$ & Simplify $\tan(\arctan ...)$ \\
+				$x=(8-x) \cdot \frac{6}{8}$ & Simplify $\tan(\tan^{-1} ...)$ \\
 				$x=6-\frac{6}{8}x$ & Apply the Distributive Property \\
 				$\frac{14}{8}x=6$ & Add both sides by $\frac{6}{8}x$ \\
 				$x=6 \cdot \frac{8}{14}$ & Multiply both sides by $\frac{8}{14}$ \\
