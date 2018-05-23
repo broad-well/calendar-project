@@ -4,7 +4,7 @@ Due date: June 18, 2018 (here we come!)
 
 ## State of the Calendar
 
-Done: 1, 2, 4, 7, 8, 9, 11, [12], 18, 27, 10, 14
+Done: 1, 2, 4, 7, 8, 9, 10, 11, [12], 14, 18, 22, 27
 
 ## Problem Completion Checklist
 
