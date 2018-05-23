@@ -1,0 +1,70 @@
+% !TeX spellcheck = en_US
+\documentclass[letterpaper,12pt,twoside]{report}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{textcomp}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[L]{Day 12}
+	\fancyhead[R]{\textit{The Calendar Project}}
+	\fancyfoot[L]{Citations Involved: none}
+	
+	% Problem
+	\paragraph{Problem}
+	\begin{quote}
+		\textsf{Victor noticed that the ratios of the
+			three exterior angles of a triangle, one per
+			vertex and measured in degrees, are in the
+			ratio of three consecutive integers. How
+			many triangles have this property when
+			their exterior angles are an integral
+			number of degrees?}
+	\end{quote}
+	
+	% Graphics
+	\begin{center}
+		\begin{tikzpicture}
+		
+		\end{tikzpicture}
+	\end{center}
+	
+	% Reasoning
+	\paragraph{Reasoning}
+	\begin{quotation}
+		
+		Let the measures of the exterior angles be $m_1$, $m_2$ and $m_3$. Since the exterior angles of a triangle always sum to 360\textdegree, $m_1+m_2+m_3=360$ (1). For these measures to remain integral when placed in a ratio of three consecutive integers, the sum of these integers must be a factor of 360. Let these consecutive integers be $x-1$, $x$, and $x+1$; as such, $x-1+x+x+1=3x$ is a factor of 360. Thus, for these integers to be integral, the factor must also be a multiple of three. All eligible factors and their corresponding ratios are presented in the table below:
+		
+		\begin{center}
+			\begin{tabular}{r | l}
+				6 & $1:2:3$ \\
+				9 & $2:3:4$ \\
+				12 & $3:4:5$ \\
+				15 & $4:5:6$ \\
+				18 & $5:6:7$ \\
+				24 & $7:8:9$ \\
+				30 & $9:10:11$ \\
+				36 & $11:12:13$ \\
+				45 & $14:15:16$ \\
+				60 & $19:20:21$ \\
+				72 & $23:24:25$ \\
+				90 & $29:30:31$ \\
+				120 & $39:40:41$ \\
+				180 & $59:60:61$ \\
+				360 & $119:120:121$
+			\end{tabular}
+		\end{center}
+		
+		There are $\boxed{15}$ ratios listed above.
+	\end{quotation}
+	
+	\paragraph{External References}
+	
+	\begin{enumerate}
+		\item Textbook Ch. 6, Pg. 384: Polygon Exterior Angle Sum Theorem
+	\end{enumerate}
+	
+\end{document}
