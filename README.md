@@ -4,7 +4,7 @@ Due date: June 18, 2018 (here we come!)
 
 ## State of the Calendar
 
-Done: 2, 2, 4, 7, 8, 9, 10, 11, [12], [13], 14, 15, 18, [19], [20], 22, (26 rounding?), 27
+Done: 1, 2, 4, 7, 8, 9, 10, 11, [12], [13], 14, 15, 18, [19], [20], 22, 25, (26 rounding?), 27
 
 ## Problem Completion Checklist
 

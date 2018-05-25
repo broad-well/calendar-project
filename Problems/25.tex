@@ -1,0 +1,50 @@
+% !TeX spellcheck = en_US
+\documentclass[letterpaper,12pt,twoside]{report}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[L]{Day 25}
+	\fancyhead[R]{\textit{The Calendar Project}}
+	\fancyfoot[L]{Citations Involved: none}
+	
+	% Problem
+	\paragraph{Problem}
+	\begin{quote}
+		\textsf{The three angles of a triangle have measures $a$, $b$, and $c$, with $a<b<c$.
+			Express the difference in terms of $a$, $b$,
+			and $c$ when the largest interior angle is
+			subtracted from the largest exterior
+			angle.}
+	\end{quote}
+	
+	% Graphics
+	\begin{center}
+		\begin{tikzpicture}
+		% ???
+		\end{tikzpicture}
+	\end{center}
+	
+	% Reasoning
+	\paragraph{Reasoning}
+	\begin{quotation}
+		
+		Given that $a<b<c$, it is shown that $c$ is the largest interior angle of the triangle.
+		
+		The exterior angle that corresponds to an interior angle with measure $x$ can be expressed as $180-x$. Given that $a<b<c$, negating each term and consequently negating the comparison operators yield $-a>-b>-c$. $180-a>180-b>180-c$ when 180 is added to each term; since these values represent exterior angles, the largest exterior angle is $180-a$.
+		
+		The largest interior angle subtracted from the largest exterior angle is therefore $(180-a)-c$. By the Triangle Sum Theorem (1), $a+b+c=180$ and $b=180-a-c$ when $a$ and $c$ are subtracted from both sides. Since this matches the difference described in the problem ($(180-a)-c$), its solution can be expressed as $\boxed{b}$.
+		
+	\end{quotation}
+	
+	\paragraph{External References}
+	
+	\begin{enumerate}
+		\item Textbook Ch. 4, Pg. 223: Triangle Sum Theorem
+	\end{enumerate}
+	
+\end{document}
