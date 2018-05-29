@@ -1,0 +1,57 @@
+% !TeX spellcheck = en_US
+\documentclass[letterpaper,12pt,twoside]{report}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\begin{document}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[L]{Day 17}
+	\fancyhead[R]{\textit{The Calendar Project}}
+	\fancyfoot[L]{Citations Involved: ???}
+	
+	% Problem
+	\paragraph{Problem}
+	\begin{quote}
+		\textsf{Rectangle $ABCD$ lies in the $y$,$z$-
+			plane with $A(0,10,0)$, $B(0,10,25)$, and $D(0,k,0)$; $k>10$. The
+			rectangle is rotated
+			about the z-axis to create
+			a hollow cylinder. The
+			rectangle is also rotated
+			about the y-axis to create
+			a solid cylinder. If the
+			volumes of the two solids are equal, what
+			is the value of $k$?}
+	\end{quote}
+	
+	% Graphics
+	\begin{center}
+		\begin{tikzpicture}[scale=0.2]
+		\draw[<->, very thick] (-20,0) -- (20,0);
+		\draw[<->, very thick] (0,20) -- (0,-20);
+		\draw[<->, very thick] (-5,-5) -- (5,5);
+		
+		\draw[thick] (10,0) -- (10,25) -- (15,25) -- (15,0);
+		\draw (-10,25) to [out=45,in=45] (10,25) to [out=225,in=225] (-10,25);
+		\draw (-15,25) to [out=45,in=45] (15,25) to [out=225,in=225] (-15,25);
+		\end{tikzpicture}
+	\end{center}
+	
+	% Reasoning
+	\paragraph{Reasoning}
+	\begin{quotation}
+		
+		???
+		
+	\end{quotation}
+	
+	\paragraph{External References}
+	
+	\begin{enumerate}
+		\item ???
+	\end{enumerate}
+	
+\end{document}
