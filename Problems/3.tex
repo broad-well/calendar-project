@@ -10,7 +10,7 @@
 	\fancyhf{}
 	\fancyhead[L]{Day 3}
 	\fancyhead[R]{\textit{The Calendar Project}}
-	\fancyfoot[L]{Citations Involved: 1, 2, 3}
+	\fancyfoot[L]{Citations Involved: none}
 	
 	% Problem
 	\paragraph{Problem}
@@ -47,16 +47,15 @@
 	\paragraph{Reasoning}
 	\begin{quotation}
 	
-	The complement of the condition that \textit{``at least 1 six appears''} is that no six appears, which has a probability of $\frac{\textrm{\small{favorable}}}{\textrm{\small{all possible}}} = \frac{5}{6}$ for 1 roll (1). Since it is given that the die is tossed 6 times, and since this negated condition requires \textbf{all} rolls (not just one) to not be six, the cumulative probability for this negated condition is $(\frac{5}{6})^6 = \frac{5^6}{6^6} = \frac{15625}{46656}$ (3). This result's complement, the solution to the problem, is $1-\frac{15625}{46656} = \boxed{\frac{31031}{46656} \approx 0.665}$ (2).
+	Given that the hexagon is regular, it is equilateral and equiangular by definition (1); therefore $\overline{AB}\cong\overline{BC}\cong\overline{CD}\cong\overline{DE}\cong\overline{EF}\cong\overline{FA}$ and $\angle FAB\cong\angle ABC\cong\angle BCD\cong\angle CDE\cong\angle DEF\cong\angle EFA$. Thus $\triangle FAB\cong\triangle ABC\cong\triangle BCD\cong\triangle CDE\cong\triangle DEF\cong\triangle EFA$ by SAS. With $\overline{AF}\cong\overline{FE}$ and $\overline{AC}\cong\overline{CE}$ by CPCTC, quadrilateral $AFEC$ is a kite by definition (2); with $\overline{BC}\cong\overline{CD}$ and $\overline{BF}\cong\overline{FD}$ by CPCTC, quadrilateral $BCDF$ is a kite by definition (2); with $\overline{BA}\cong\overline{AF}$ and $\overline{BD}\cong\overline{DF}$ by CPCTC, quadrilateral $BAFD$ is a kite by definition (2); with $\overline{CD}\cong\overline{DE}$ and $\overline{CA}\cong\overline{AE}$ by CPCTC, quadrilateral $CDEA$ is a kite by definition (2); with $\overline{AB}\cong\overline{BC}$ and $\overline{AE}\cong\overline{EC}$ by CPCTC, quadrilateral $ABCE$ is a kite by definition (2); with $\overline{FE}\cong\overline{ED}$ and $\overline{FB}\cong\overline{BD}$ by CPCTC, quadrilateral $FEDB$ is a kite by definition (2). Since the diagonals of a kite are perpendicular, $\overline{AE}\bot\overline{FC}$, $\overline{BD}\bot\overline{CF}$, $\overline{BF}\bot\overline{AD}$, $\overline{CE}\bot\overline{DA}$, $\overline{AC}\bot\overline{BE}$, $\overline{FD}\bot\overline{EB}$. $\boxed{6}$ perpendicular pairs of diagonals are listed.
 	
 	\end{quotation}
 	
 	\paragraph{External References}
 	
 	\begin{enumerate}
-		\item Textbook Ch. 13, Pg. 878: Theoretical Probability
-		\item Textbook Ch. 13, Pg. 879: Complement
-		\item Textbook Ch. 13, Pg. 887: Probability of Independent Events
+		\item Textbook Ch. 6, Pg. 382: Definition of a Regular Polygon
+		\item Textbook Ch. 6, Pg. 427: Definition of a Kite
 	\end{enumerate}
 
 \end{document}
