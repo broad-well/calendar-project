@@ -1,0 +1,22 @@
+\RequirePackage{longtable}
+
+\newcounter{proofstmt}
+\newenvironment{TwoColumnProof}{
+  \renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash}p{##1}}
+  \renewcommand{\arraystretch}{1.15}
+  \setcounter{proofstmt}{0}
+  \newcommand{\StatementReason}[2]{%
+    \refstepcounter{proofstmt}
+    \theproofstmt. & ##1 & \theproofstmt. & ##2\\
+  }
+  \vspace{\baselineskip}
+  \noindent\tabularx{\textwidth}{c @{\hspace{0.5em}}X c@{\hspace{0.5em}} X}
+  \hline
+  \multicolumn{2}{c}{\bfseries Statement} & \multicolumn{2}{c}{\bfseries Reason}\\
+  \hline
+}{%
+  \endtabularx%
+  \hrule%
+  \vspace*{\baselineskip}
+}
+
