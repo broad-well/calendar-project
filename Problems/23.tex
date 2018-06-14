@@ -8,12 +8,6 @@
 \usepackage{graphicx}
 \usepackage{calc}
 
-% https://tex.stackexchange.com/questions/86044/represent-an-arc-over-letters/86045#86045
-\newlength{\mywidth}
-\newcommand\bigfrown[2][\textstyle]{\ensuremath{%
-		\array[b]{c}\text{\resizebox{\mywidth}{.7ex}{$#1\frown$}}\\[-1.3ex]#1#2\endarray}}
-\settowidth{\mywidth}{AC}
-
 \begin{document}
 	\pagestyle{fancy}
 	\fancyhf{}
@@ -25,7 +19,7 @@
 	\paragraph{Problem}
 	\begin{quote}
 		\textsf{Diagonal $AC$ in square $ABCD$ is a
-			chord of a circle with radius 12 cm. If $\textrm{m}\bigfrown{AC} = 30$\textdegree, what is the area of $ABCD$?}
+			chord of a circle with radius 12 cm. If $\textrm{m}\widehat{AC} = 30$\textdegree, what is the area of $ABCD$?}
 	\end{quote}
 	
 	% Graphics

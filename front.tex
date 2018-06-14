@@ -1,0 +1,30 @@
+\documentclass[letterpaper]{memoir}
+\usepackage{tikz}
+\usepackage{geometry}
+\geometry{letterpaper,left=0pt,top=0pt,right=0pt,bottom=0pt}
+\usetikzlibrary{calc}
+
+\begin{document}
+	\begin{center}
+		\begin{vplace}
+	\begin{tikzpicture}[xscale=5,yscale=5]
+		\draw[domain=-2:2,smooth,ultra thick,gray] plot ({\x},{tanh \x});
+		\draw[domain=-2:2,smooth,ultra thick,gray] plot ({\x}, {\x});
+		\draw[domain=-2:2,smooth,ultra thick,gray] plot ({\x}, {-\x});
+		\draw[domain=-2:2,smooth,ultra thick,gray] plot ({\x},{-tanh \x});
+		\draw[domain=-2:2,smooth,ultra thick,variable=\y,gray] plot ({tanh \y},{\y});
+		\draw[domain=-2:2,smooth,ultra thick,variable=\y,gray] plot ({-tanh \y},{\y});
+		\draw[ultra thick,gray] (0,0) circle [radius=2];
+		\draw[domain=-2:-0.5,smooth,ultra thick,gray] plot ({\x},{1/(-\x)});
+		\draw[domain=0.5:2,smooth,ultra thick,gray] plot ({\x},{1/(-\x)});
+		\draw[domain=-2:-0.5,smooth,ultra thick,gray] plot ({\x},{1/(\x)});
+		\draw[domain=0.5:2,smooth,ultra thick,gray] plot ({\x},{1/(\x)});
+		\draw[ultra thick, gray] (-2,0) -- (2,0);
+		\draw[ultra thick, gray] (0,2) -- (0,-2);
+		\node at (-1.45,0.2) {\fontfamily{ptm} \Huge The};
+		\node at (-1.2,-0.1) {\fontfamily{ptm} \Huge Calendar};
+		\node at (-1.1,-0.4) {\fontfamily{ptm} \Huge Project};
+	\end{tikzpicture}
+	\end{vplace}
+	\end{center}
+\end{document}
