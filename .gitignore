@@ -3,3 +3,7 @@
 *.log
 *.synctex.gz
 .*
+!.gitignore
+*.out
+*.nav
+*.snm
