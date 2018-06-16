@@ -1,7 +1,7 @@
 \documentclass[letterpaper]{memoir}
 \usepackage{tikz}
 \usepackage{geometry}
-\geometry{letterpaper,left=0pt,top=0pt,right=0pt,bottom=0pt}
+\geometry{letterpaper,left=0pt,top=0pt,right=0pt,bottom=10pt}
 \usetikzlibrary{calc}
 
 \begin{document}
@@ -12,8 +12,32 @@
 	% Material Design Palette, Purple 400
 	\definecolor{top}{RGB}{171,71,188}
 	
+	
 	\begin{center}
+	
+	\centering
+	\begin{tikzpicture}[xscale=5,yscale=5,overlay]
+		\draw[domain=-2:2,smooth,ultra thick,magenta!30!gray] plot ({\x},{tanh \x});
+		\draw[domain=-2:2,smooth,ultra thick,yellow!30!gray] plot ({\x}, {\x});
+		\draw[domain=-2:2,smooth,ultra thick,yellow!30!gray] plot ({\x}, {-\x});
+		\draw[domain=-2:2,smooth,ultra thick,magenta!30!gray] plot ({\x},{-tanh \x});
+		\draw[domain=-2:2,smooth,ultra thick,variable=\y,magenta!30!gray] plot ({tanh \y},{\y});
+		\draw[domain=-2:2,smooth,ultra thick,variable=\y,magenta!30!gray] plot ({-tanh \y},{\y});
+		\draw[domain=-1.44:1.44,smooth,ultra thick,orange!30!gray] plot ({\x},{sinh \x});
+		\draw[domain=-1.44:1.44,smooth,ultra thick,variable=\y,orange!30!gray] plot ({sinh \y},{\y});
+		\draw[domain=-1.44:1.44,smooth,ultra thick,orange!30!gray] plot ({\x},{-sinh \x});
+		\draw[domain=-1.44:1.44,smooth,ultra thick,variable=\y,orange!30!gray] plot ({-sinh \y},{\y});
+		\draw[domain=-2:2,smooth,ultra thick,red!30!gray] plot ({\x},{sinh (tanh \x)});
+		\draw[domain=-2:2,smooth,ultra thick,variable=\y,red!30!gray] plot ({sinh (tanh \y)},{\y});
+		\draw[domain=-2:2,smooth,ultra thick,red!30!gray] plot ({\x},{-sinh (tanh \x)});
+		\draw[domain=-2:2,smooth,ultra thick,variable=\y,red!30!gray] plot ({-sinh (tanh \y)},{\y});
+		\draw[ultra thick,blue!30!gray] (0,0) circle [radius=2];
+		\draw[ultra thick,gray] (-2,0) -- (2,0);
+		\draw[ultra thick, gray] (0,2) -- (0,-2);
+	\end{tikzpicture}
 		\begin{vplace}
+		
+	
 			\begin{tikzpicture}[y={(-0.5cm,0.25cm)},x={(0.5cm,0.25cm)},z={(0cm,0.5cm)}]
 			% C
 			\draw[fill=front] (0,0,0) -- (3,0,0) -- (3,0,1) -- (1,0,1) -- (1,0,4) -- (3,0,4) -- (3,0,5) -- (0,0,5) -- (0,0,0);
@@ -68,29 +92,13 @@
 			\draw[fill=left] (30,0,3) -- (30,1,3) -- (30,0,4) -- cycle;
 			\draw[fill=top] (29,0,3) -- (29,0,4) -- (30,0,3) -- cycle;
 			\draw[fill=left] (30,0,0) -- (30,1,0) -- (29,0,2) -- (29.5,0,2) -- cycle;
+			
+			\node at (0,0,15) {\fontfamily{lmss} \fontsize{3cm}{15cm}\selectfont \textcolor{front}{THE}};
+			\node at (20,0,-12) {\fontfamily{lmss} \fontsize{3cm}{15cm}\selectfont \textcolor{front}{PROJECT}};
 			\end{tikzpicture}
-	\begin{tikzpicture}[xscale=5,yscale=5]
-		\draw[domain=-2:2,smooth,ultra thick,magenta] plot ({\x},{tanh \x});
-		\draw[domain=-2:2,smooth,ultra thick,yellow] plot ({\x}, {\x});
-		\draw[domain=-2:2,smooth,ultra thick,yellow] plot ({\x}, {-\x});
-		\draw[domain=-2:2,smooth,ultra thick,magenta] plot ({\x},{-tanh \x});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,magenta] plot ({tanh \y},{\y});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,magenta] plot ({-tanh \y},{\y});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,orange] plot ({\x},{sinh \x});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,variable=\y,orange] plot ({sinh \y},{\y});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,orange] plot ({\x},{-sinh \x});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,variable=\y,orange] plot ({-sinh \y},{\y});
-		\draw[domain=-2:2,smooth,ultra thick,red] plot ({\x},{sinh (tanh \x)});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,red] plot ({sinh (tanh \y)},{\y});
-		\draw[domain=-2:2,smooth,ultra thick,red] plot ({\x},{-sinh (tanh \x)});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,red] plot ({-sinh (tanh \y)},{\y});
-		\draw[ultra thick,blue] (0,0) circle [radius=2];
-		\draw[ultra thick,gray] (-2,0) -- (2,0);
-		\draw[ultra thick, gray] (0,2) -- (0,-2);
-		\node at (-1.45,0.2) {\fontfamily{ptm} \Huge The};
-		\node at (-1.2,-0.1) {\fontfamily{ptm} \Huge Calendar};
-		\node at (-1.1,-0.4) {\fontfamily{ptm} \Huge Project};
-	\end{tikzpicture}
+			
 	\end{vplace}
+			{\Huge Reasoning | Logic | Strategy }\\
+			{\large An adventure administered by Michael Peng}
 	\end{center}
 \end{document}
