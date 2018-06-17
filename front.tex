@@ -16,24 +16,21 @@
 	\begin{center}
 	
 	\centering
-	\begin{tikzpicture}[xscale=5,yscale=5,overlay]
-		\draw[domain=-2:2,smooth,ultra thick,magenta!30!gray] plot ({\x},{tanh \x});
-		\draw[domain=-2:2,smooth,ultra thick,yellow!30!gray] plot ({\x}, {\x});
-		\draw[domain=-2:2,smooth,ultra thick,yellow!30!gray] plot ({\x}, {-\x});
-		\draw[domain=-2:2,smooth,ultra thick,magenta!30!gray] plot ({\x},{-tanh \x});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,magenta!30!gray] plot ({tanh \y},{\y});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,magenta!30!gray] plot ({-tanh \y},{\y});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,orange!30!gray] plot ({\x},{sinh \x});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,variable=\y,orange!30!gray] plot ({sinh \y},{\y});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,orange!30!gray] plot ({\x},{-sinh \x});
-		\draw[domain=-1.44:1.44,smooth,ultra thick,variable=\y,orange!30!gray] plot ({-sinh \y},{\y});
-		\draw[domain=-2:2,smooth,ultra thick,red!30!gray] plot ({\x},{sinh (tanh \x)});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,red!30!gray] plot ({sinh (tanh \y)},{\y});
-		\draw[domain=-2:2,smooth,ultra thick,red!30!gray] plot ({\x},{-sinh (tanh \x)});
-		\draw[domain=-2:2,smooth,ultra thick,variable=\y,red!30!gray] plot ({-sinh (tanh \y)},{\y});
-		\draw[ultra thick,blue!30!gray] (0,0) circle [radius=2];
-		\draw[ultra thick,gray] (-2,0) -- (2,0);
-		\draw[ultra thick, gray] (0,2) -- (0,-2);
+	\begin{tikzpicture}[xscale=3.5,yscale=3.5,remember picture,overlay,shift={(current page.center)}]
+		\draw[domain=-5:-0.1,smooth,ultra thick,magenta!30!gray] plot ({\x},{1/ \x});
+		\draw[domain=0.1:5,smooth,ultra thick,magenta!30!gray] plot ({\x},{1/ \x});
+		\draw[domain=-5:-0.1,smooth,ultra thick,yellow!30!gray] plot ({\x}, {-1/ \x});
+		\draw[domain=0.1:5,smooth,ultra thick,yellow!30!gray] plot ({\x}, {-1/ \x});
+		\draw[domain=-5:-0.1,smooth,ultra thick,yellow!30!gray] plot ({\x}, {4/\x});
+		\draw[domain=0.1:5,smooth,ultra thick,yellow!30!gray] plot ({\x}, {4/\x});
+		\draw[domain=-5:-0.1,smooth,ultra thick,magenta!30!gray] plot ({\x},{-4/\x});
+		\draw[domain=0.1:5,smooth,ultra thick,magenta!30!gray] plot ({\x},{-4/\x});
+		\draw[smooth,ultra thick,variable=\y,magenta!30!gray] plot ({\y^2},{\y});
+		\draw[smooth,ultra thick,variable=\y,magenta!30!gray] plot ({-\y^2},{\y});
+		\draw[smooth,ultra thick,orange!30!gray] plot ({\x},{\x^2});
+		\draw[smooth,ultra thick,magenta!30!gray] plot ({\x},{-\x^2});
+		\draw[ultra thick,blue!30!gray] (0,0) circle [radius=1.44];
+		\draw[ultra thick,blue!30!gray] (0,0) circle [radius=2.88];
 	\end{tikzpicture}
 		\begin{vplace}
 		
@@ -98,7 +95,7 @@
 			\end{tikzpicture}
 			
 	\end{vplace}
-			{\Huge Reasoning | Logic | Strategy }\\
+			{\Huge Discipline | Logic | Strategy }\\
 			{\large An adventure administered by Michael Peng}
 	\end{center}
 \end{document}

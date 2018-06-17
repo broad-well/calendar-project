@@ -58,17 +58,39 @@
 
 	\paragraph{The Limit Notation}
 	\begin{quotation}
-		In modern mathematics (especially Calculus), there are certain expressions that produces an unwanted value when certain variables 
+		In modern mathematics (especially Calculus), there are certain expressions that produces an unwanted value when certain variables reach certain values. A basic example of this is division by zero, which evaluates to undefined. The limit notation is used to describe what the value of the expression \textbf{approaches} as a certain variable approaches a certain value. In this example, the following expression would be used with the notation: $$\lim_{n\to 0} \frac{1}{n}(=\infty)$$
+		
+		\textit{As $n$ approaches 0, $\frac{1}{n}$ approaches $\infty$}. Note that this notation can also be applied to normal expressions; an example of this is shown below: $$\lim_{n \to 10} 20n=20\cdot10=200$$
+		
+		The limit notation is an important concept in Calculus as it captures the notion of \textit{minimizing a value}. It will be revisited frequently.
 	\end{quotation}
 
 	\paragraph{Introduction to Derivatives}
 	\begin{quotation}
-	Google defines the Derivative as ``an expression representing the rate of change of a function with respect to an independent variable.'' In a graph of $y=f(x)$ on the coordinate plane, a Derivative refers to the instantaneous slope with respect to $x$. 
+	Google defines the Derivative as ``an expression representing the rate of change of a function with respect to an independent variable.'' Students of Enriched Geometry have already gained a basic comprehension of the derivative---velocity is the derivative of position, and acceleration is the derivative of velocity. In a graph of $y=f(x)$ on the coordinate plane, a derivative refers to the instantaneous slope of the graph with respect to $x$. The following graph illustrates this idea:
+	\begin{center}
+	\begin{tikzpicture}
+		\draw[<->,ultra thick] (-2,0) -- (2,0);
+		\draw[<->,ultra thick] (0,2) -- (0,-2);
+		\draw[<->,thick,domain=-2:2] plot (\x,{\x*\x});
+		\draw[<->,thick,domain=-1:2] plot (\x,{2*\x-1});
+		\draw[fill] (1,1) circle [radius=0.05];
+		\node[left] at (1,1) {$T$};
+		\node[right] at (-2,4) {$\ell$};
+		\node[right] at (2,3) {$\alpha$};
+		\end{tikzpicture}
+	\end{center}
 \end{quotation}
+
+$\ell$ is a graph of the equation $y=x^2$, and $\alpha$ is the instantaneous slope of $\ell$ when $x=1$. $T$ is the point of tangency between $\ell$ and $\alpha$. The slope formula is $\frac{y_2-y_1}{x_2-x_1}$ and requires two points; to use this to represent the \textit{instantaneous slope}, these points must be infinitesimally close to each other. Let the difference in $x$ between them be $\Delta x$, and let the graph have the equation $y=f(x)$; as such, the instantaneous slope of the graph for any $x$ is $\frac{f(x+\Delta x)-f(x)}{\Delta x}$. Since this difference is meant to be minimized, the limit notation can be used to introduce the derivative of function $f$, expressed as $f^\prime$: $$f^\prime(x)=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$$
+
+In fact, this is the formal definition of a derivative.
 
 	\paragraph{Introduction to Integral Calculus}
 	\begin{quotation}
-		This problem is a typical application of the classic ``area under a curve'' problem that introduces many students to Integral Calculus.
+		An integral, or antiderivative, is the inverse of the derivative. Reusing the previous examples, the concept of the integral is exemplified with the processes of turning acceleration into velocity, and velocity into position. An integral of a given function $F(x)$ can be defined as a function $f(x)$ such that the derivative of $f(x)$, or $f^\prime(x)$, is equivalent to $F(x)$. Integrals are mathematically expressed using the integral sign: $\int$. An integral of a function $f(x)$ can be represented by the following: $$\int f(x)dx$$
+		
+		Reusing the definition of a derivative above yields:This problem is a typical application of the classic ``area under a curve'' problem that introduces many students to Integral Calculus.
 		
 		Consider the area of the {\color{green} green} rectangles above as an approximation of the area under the parabola $y=x^2$ from $x=-1$ to $x=1$. This is an application of the Riemann Sum. Let the width of each rectangle be $\Delta x$; since the area formula for a rectangle is $wl$ where $w$ is its width and $l$ is its length, the area of one such rectangle can be expressed as $x^2\Delta x$ where $x$ represents its horizontal displacement from the $y$-axis. As such, the approximate area under $y=x^2$ bounded by the $y$-axis and $x=g$ can be expressed as $\sum\limits_{n=1}^{\frac{|g|}{\Delta x}}(n\Delta x)^2\Delta x=\sum\limits_{n=1}^{\frac{|g|}{\Delta x}}n^2(\Delta x)^3$ where $g$ is a multiple of $\Delta x$. To represent the exact solution, $\Delta x$ must be infinitesimal; thus the exact area is $\lim\limits_{\Delta x \rightarrow 0}\sum\limits_{n=1}^{\frac{|g|}{\Delta x}}n^2(\Delta x)^3$.
 	\end{quotation}
