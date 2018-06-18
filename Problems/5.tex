@@ -10,7 +10,7 @@
 	\fancyhf{}
 	\fancyhead[L]{Day 5}
 	\fancyhead[R]{\textit{The Calendar Project}}
-	\fancyfoot[L]{Citations Involved: 1, 2, 3}
+	\fancyfoot[L]{Citations Involved: 2, 3}
 	
 	% Problem
 	\paragraph{Problem}
@@ -43,11 +43,14 @@
 			\draw[fill=green] (-0.6,0.36) -- (-0.4,0.36) -- (-0.4,0) -- (-0.6,0) -- cycle;
 			\draw[fill=green] (-0.4,0.16) -- (-0.2,0.16) -- (-0.2,0) -- (-0.4,0) -- cycle;
 			\draw[fill=green] (-0.2,0.04) -- (0,0.04) -- (0,0) -- (-0.2,0) -- cycle;
-			\draw[fill=green] (0,0.04) -- (0.2,0.04) -- (0.2,0) -- (0,0) -- cycle;
-			\draw[fill=green] (0.4,0.16) -- (0.2,0.16) -- (0.2,0) -- (0.4,0) -- cycle;
-			\draw[fill=green] (0.6,0.36) -- (0.4,0.36) -- (0.4,0) -- (0.6,0) -- cycle;
-			\draw[fill=green] (0.8,0.64) -- (0.6,0.64) -- (0.6,0) -- (0.8,0) -- cycle;
-			\draw[fill=green] (1,1) -- (0.8,1) -- (0.8,0) -- (1,0) -- cycle;
+			\draw[fill=green] (0,0.00390625) -- (0.125,0.00390625) -- (0.125,0) -- (0,0) -- cycle;
+			\draw[fill=green] (0.125,0.03515625) -- (0.25,0.03515625) -- (0.25,0) -- (0.125,0) -- cycle;
+			\draw[fill=green] (0.25,0.09765625) -- (0.375,0.09765625) -- (0.375,0) -- (0.25,0) -- cycle;
+			\draw[fill=green] (0.375,0.19140625) -- (0.5,0.19140625) -- (0.5,0) -- (0.375,0) -- cycle;
+			\draw[fill=green] (0.5,0.31640625) -- (0.625,0.31640625) -- (0.625,0) -- (0.5,0) -- cycle;
+			\draw[fill=green] (0.625,0.47265625) -- (0.75,0.47265625) -- (0.75,0) -- (0.625,0) -- cycle;
+			\draw[fill=green] (0.75,0.66015625) -- (0.875,0.66015625) -- (0.875,0) -- (0.75,0) -- cycle;
+			\draw[fill=green] (0.875,0.87890625) -- (1,0.87890625) -- (1,0) -- (0.875,0) -- cycle;
 			\draw[<->][blue,thick,domain=-1.5:1.5] plot (\x,{\x*\x});
 			
 			\draw [<->][ultra thick] (-1.5,0) -- (1.5,0);
@@ -56,6 +59,12 @@
 	\end{center}
 \end{minipage}
 
+	\paragraph{Summation Notation (Sigma)}
+	\begin{quotation}
+		The summation symbol, or uppercase Sigma in the Greek alphabet, represents the collective sum of the expression immediately following it for all values of the counter variable from the specified starting value to the ending value. It is more formally defined as follows: $$\sum^n_{i=j}f(i)=f(j)+f(j+1)+f(j+2)+\dots+f(n-1)+f(n)$$
+		
+		
+	\end{quotation}
 	\paragraph{The Limit Notation}
 	\begin{quotation}
 		In modern mathematics (especially Calculus), there are certain expressions that produces an unwanted value when certain variables reach certain values. A basic example of this is division by zero, which evaluates to undefined. The limit notation is used to describe what the value of the expression \textbf{approaches} as a certain variable approaches a certain value. In this example, the following expression would be used with the notation: $$\lim_{n\to 0} \frac{1}{n}(=\infty)$$
@@ -64,51 +73,63 @@
 		
 		The limit notation is an important concept in Calculus as it captures the notion of \textit{minimizing a value}. It will be revisited frequently.
 	\end{quotation}
-
-	\paragraph{Introduction to Derivatives}
-	\begin{quotation}
-	Google defines the Derivative as ``an expression representing the rate of change of a function with respect to an independent variable.'' Students of Enriched Geometry have already gained a basic comprehension of the derivative---velocity is the derivative of position, and acceleration is the derivative of velocity. In a graph of $y=f(x)$ on the coordinate plane, a derivative refers to the instantaneous slope of the graph with respect to $x$. The following graph illustrates this idea:
+	
 	\begin{center}
-	\begin{tikzpicture}
-		\draw[<->,ultra thick] (-2,0) -- (2,0);
-		\draw[<->,ultra thick] (0,2) -- (0,-2);
-		\draw[<->,thick,domain=-2:2] plot (\x,{\x*\x});
-		\draw[<->,thick,domain=-1:2] plot (\x,{2*\x-1});
-		\draw[fill] (1,1) circle [radius=0.05];
-		\node[left] at (1,1) {$T$};
-		\node[right] at (-2,4) {$\ell$};
-		\node[right] at (2,3) {$\alpha$};
+		\begin{tikzpicture}[scale=2]
+			\draw[->,ultra thick] (0,0) -- (0,2);
+			\draw[->,ultra thick] (0,0) -- (2,0);
+			
+			\draw[thick] (1,1) -- (1,0);
+			\draw[fill=purple] (0,{0.125*0.125}) -- (0.125,{0.125*0.125}) -- (0.125,0) -- (0,0) -- cycle;
+			\draw[fill=purple] (0.125,{0.25*0.25}) -- (0.25,{0.25*0.25}) -- (0.25,0) -- (0.125,0) -- cycle;
+			\draw[fill=purple] (0.25,{0.375*0.375}) -- (0.375,{0.375*0.375}) -- (0.375,0) -- (0.25,0) -- cycle;
+			\draw[fill=purple] (0.375,0.25) -- (0.5,0.25) -- (0.5,0) -- (0.375,0) -- cycle;
+			\draw[fill=purple] (0.5,{0.625*0.625}) -- (0.625,{0.625*0.625}) -- (0.625,0) -- (0.5,0) -- cycle;
+			\draw[fill=purple] (0.625,{0.75*0.75}) -- (0.75,{0.75*0.75}) -- (0.75,0) -- (0.625,0) -- cycle;
+			\draw[fill=purple] (0.75,{0.875*0.875}) -- (0.875,{0.875*0.875}) -- (0.875,0) -- (0.75,0) -- cycle;
+			\draw[fill=purple] (0.875,1) -- (1,1) -- (1,0) -- (0.875,0) -- cycle;
+			\draw[->,thick,domain=0:1.5] plot ({\x},{\x*\x});
+			\node[below] at (1,0) {$1$};
+			
+			\draw[thick] (0,0) -- (0,-0.2);
+			\draw[thick] (0.125,0) -- (0.125,-0.2);
+			\draw[thick] (0,-0.1) -- (0.125,-0.1);
+			\node[below] at (0.0625,-0.19) {$\frac{1}{n}$};
+			\node[right] at (1.5,2.25) {$y=x^2$};
 		\end{tikzpicture}
 	\end{center}
-\end{quotation}
-
-$\ell$ is a graph of the equation $y=x^2$, and $\alpha$ is the instantaneous slope of $\ell$ when $x=1$. $T$ is the point of tangency between $\ell$ and $\alpha$. The slope formula is $\frac{y_2-y_1}{x_2-x_1}$ and requires two points; to use this to represent the \textit{instantaneous slope}, these points must be infinitesimally close to each other. Let the difference in $x$ between them be $\Delta x$, and let the graph have the equation $y=f(x)$; as such, the instantaneous slope of the graph for any $x$ is $\frac{f(x+\Delta x)-f(x)}{\Delta x}$. Since this difference is meant to be minimized, the limit notation can be used to introduce the derivative of function $f$, expressed as $f^\prime$: $$f^\prime(x)=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$$
-
-In fact, this is the formal definition of a derivative.
-
-	\paragraph{Introduction to Integral Calculus}
+	\paragraph{Riemann Sums}
 	\begin{quotation}
-		An integral, or antiderivative, is the inverse of the derivative. Reusing the previous examples, the concept of the integral is exemplified with the processes of turning acceleration into velocity, and velocity into position. An integral of a given function $F(x)$ can be defined as a function $f(x)$ such that the derivative of $f(x)$, or $f^\prime(x)$, is equivalent to $F(x)$. Integrals are mathematically expressed using the integral sign: $\int$. An integral of a function $f(x)$ can be represented by the following: $$\int f(x)dx$$
+		Given a graph of $y=f(x)$, The area under a curve can be approximated using a method named Riemann Sums, in which the area is horizontally split into an arbitrary number of rectangles. See the figure near the problem definition on the right for an example. To prevent further complication, the optimal approach with this method is where each rectangle has equal width; this approach will be used below.
 		
-		Reusing the definition of a derivative above yields:This problem is a typical application of the classic ``area under a curve'' problem that introduces many students to Integral Calculus.
+		The accuracy of approximation using Riemann Sums increases when more rectangles are used; when the number of rectangles approaches $\infty$, the deduced area approaches the exact answer.
 		
-		Consider the area of the {\color{green} green} rectangles above as an approximation of the area under the parabola $y=x^2$ from $x=-1$ to $x=1$. This is an application of the Riemann Sum. Let the width of each rectangle be $\Delta x$; since the area formula for a rectangle is $wl$ where $w$ is its width and $l$ is its length, the area of one such rectangle can be expressed as $x^2\Delta x$ where $x$ represents its horizontal displacement from the $y$-axis. As such, the approximate area under $y=x^2$ bounded by the $y$-axis and $x=g$ can be expressed as $\sum\limits_{n=1}^{\frac{|g|}{\Delta x}}(n\Delta x)^2\Delta x=\sum\limits_{n=1}^{\frac{|g|}{\Delta x}}n^2(\Delta x)^3$ where $g$ is a multiple of $\Delta x$. To represent the exact solution, $\Delta x$ must be infinitesimal; thus the exact area is $\lim\limits_{\Delta x \rightarrow 0}\sum\limits_{n=1}^{\frac{|g|}{\Delta x}}n^2(\Delta x)^3$.
+		In this problem, the graph is given to be $y=x^2$. From the Area Addition Postulate, it can be deduced that the shaded area is equal to the area of the bounding rectangle (with the given vertices) subtracted from the exact area bounded by $y=x^2$, the $x$-axis, $x=-1$, and $x=1$. For simplicity, the area of the region bounded by $y=x^2$, the $x$-axis, the $y$-axis, and $x=1$ is determined below; the deduced area is later used to find the answer to this problem.
+		
+		Let the number of rectangles be $n$, and let $x_i$ represent the $x$ component of the vertical line that contains the \textbf{right} side of the $i^\text{th}$ rectangle, where $1\leq i\leq n$. Let the height of the $i^\text{th}$ rectangle be determined by $f(x_i)$; in this problem, this is equal to $x_i^2$. Let the width of the rectangles be $w$; with $n$ rectangles, the width of the composite shape can be represented by $wn$; it is given that $wn=1-0=1 \Rightarrow w=\frac{1}{n}$. Given that the left boundary of the area being determined is the $y$-axis, the left side of the first rectangle is located on the $y$-axis. Since each rectangle has a width of $\frac{1}{n}$, the $x$ component of the vertical line containing the right side of the $i^\text{th}$ rectangle can be represented by $i\frac{1}{n} \Rightarrow \frac{i}{n}$; as such, $x_i=\frac{i}{n}$.
+		
+		To determine the expression for $x_i$, The area formula for a rectangle is its width multiplied by its height; as such, the area of the $i^\text{th}$ rectangle can be represented by $(\frac{1}{n})(x_i^2)$. The sum of the area of the rectangles can therefore be represented by $(\frac{1}{n})(x_1^2)+(\frac{1}{n})(x_2^2)+(\frac{1}{n})(x_3^2)+\dots+(\frac{1}{n})(x_n^2)$; by the distributive property, this can be simplified to $(\frac{1}{n})(x_1^2+x_2^2+x_3^2+\dots+x_n^2)$, or $\frac{1}{n}\sum^n_{i=1} x_i^2$. Additionally, to determine the \textbf{exact} area of the region, the number of rectangles must be maximized. As such, using $\frac{i}{n}$ as a substitute for $x_i$, the area of this region can be expressed and transformed as follows:
+		\begin{align*}
+		\lim_{n\to\infty}\frac{1}{n}\sum^n_{i=1}(\frac{i}{n})^2 &= \lim_{n\to\infty}\frac{1}{n}\sum^n_{i=1}\frac{i^2}{n^2} \\
+		&= \lim_{n\to\infty}\frac{1}{n}\frac{\sum^n_{i=1}i^2}{n^2} \\
+		&= \lim_{n\to\infty}\frac{\sum^n_{i=1}i^2}{n^3}
+		\end{align*} 
+		
+		One of Bernoulli's formulas, $\sum_{k=0}^{n}k^2=\frac{n(n+1)(2n+1)}{6}$, can be used. Since the first term of the expanded expression of the summation, $0^2$, is 0, this formula also equals to $\sum_{k=1}^{n}$ by the Addition Property of Zero. After substitution, the final form above is transformed as follows:
+		
+		\begin{align*}
+		\lim_{n\to\infty}\frac{\sum^n_{i=1}i^2}{n^3}
+		&= \lim_{n\to\infty}\frac{\frac{n(n+1)(2n+1)}{6}}{n^3} \\
+		&= \lim_{n\to\infty}\frac{n(n+1)(2n+1)}{6n^3} \\
+		&= \lim_{n\to\infty}\frac{2n^3+3n^2+n}{6n^3} \\
+		&= \lim_{n\to\infty}\frac{2n^2+3n+1}{6n^2} \\
+		&= \lim_{n\to\infty}(\frac{2n^2}{6n^2}+\frac{3n}{6n^2}+\frac{1}{6n^2}) \\
+		&= \lim_{n\to\infty}(\frac{1}{3}+\frac{1}{2n}+\frac{1}{6n^2})
+		\end{align*}
+		
+		As $n$ approaches $\infty$, fractions whose denominators include $n$ as a multiplicative term approach $0$ in value. As such, the final expression above can be simplified to $(\frac{1}{3}+0+0)=\frac{1}{3}$. Since squares have the property that $(-x)^2=x^2$, the given parabola is symmetric across the $y$-axis. As such, reusing this strategy for the area bounded by $y=x^2$, the $y$-axis, the $x$-axis, and $x=-1$ yields the same result of $\frac{1}{3}$. By the Area Addition Postulate, the area under $y=x^2$ from $x=-1$ to $x=1$ is $\frac{1}{3}+\frac{1}{3}=\frac{2}{3}$.
+		
+		The rectangle is given to have vertices $(1,0)$, $(1,1)$, $(-1,1)$, and $(-1, 0)$. Its length is the distance between $(-1,0)$ and $(1,0)$, which is $\sqrt{(1-(-1))^2+(0-0)^2}=\sqrt{2^2}=2$. Its width is the distance between $(-1,0)$ and $(-1,1)$, which is $\sqrt{(-1-(-1))^2+(0-1)^2}=\sqrt{0+1}=1$. The formula for the area of a rectangle is its length multiplied by its width, or $2\cdot 1=2 \text{  units}^2$. By the Area Addition Postulate, the sum of the area of the given shaded parabolic segment and the area under the parabola that is previously determined equals the area of the rectangle: $[\text{given parabolic segment}]+\frac{2}{3}=2 \Rightarrow [\text{given parabolic segment}]=2-\frac{2}{3}=\frac{4}{3}$. The area of the given parabolic segment compared to the the area of the rectangle is therefore $\frac{\frac{4}{3}}{2}=\boxed{\frac{2}{3}}$.
 	\end{quotation}
-	
-	% Reasoning
-	\paragraph{Reasoning}
-	\begin{quotation}
-	
-	The complement of the condition that \textit{``at least 1 six appears''} is that no six appears, which has a probability of $\frac{\textrm{\small{favorable}}}{\textrm{\small{all possible}}} = \frac{5}{6}$ for 1 roll (1). Since it is given that the die is tossed 6 times, and since this negated condition requires \textbf{all} rolls (not just one) to not be six, the cumulative probability for this negated condition is $(\frac{5}{6})^6 = \frac{5^6}{6^6} = \frac{15625}{46656}$ (3). This result's complement, the solution to the problem, is $1-\frac{15625}{46656} = \boxed{\frac{31031}{46656} \approx 0.665}$ (2) 
-	
-	\end{quotation}
-	
-	\paragraph{External References}
-	
-	\begin{enumerate}
-		\item Textbook Ch. 13, Pg. 878: Theoretical Probability
-		\item Textbook Ch. 13, Pg. 879: Complement
-		\item Textbook Ch. 13, Pg. 887: Probability of Independent Events
-	\end{enumerate}
 
 \end{document}
